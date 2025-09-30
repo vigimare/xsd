@@ -1,9 +1,10 @@
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://example.com/vigimareindication"
-           xmlns="http://example.com/vigimareindication"
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="https://github.com/vigimare/xsd"
+	xmlns="https://github.com/vigimare/xsd"
            elementFormDefault="qualified">
 
-  <xs:element name="VigimareIndication">
+  <xs:element name="Indication">
     <xs:complexType>
       <xs:annotation>
         <xs:documentation>VigimareIndication class</xs:documentation>

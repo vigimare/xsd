@@ -1,0 +1,26 @@
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="https://github.com/vigimare/xsd"
+	xmlns="https://github.com/vigimare/xsd"
+           elementFormDefault="qualified">
+	<xs:element name="Intention">
+		<xs:complexType>
+			<xs:annotation>
+				<xs:documentation>Intention class that extends CISE</xs:documentation>
+			</xs:annotation>
+			<xs:sequence>
+				<xs:element name="Classification" type="xs:string"/>
+				<xs:element name="Probability">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:double">
+                        <xs:minInclusive value="0.0"/>
+                        <xs:maxInclusive value="1.0"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+
+				<xs:element name="Explanation" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

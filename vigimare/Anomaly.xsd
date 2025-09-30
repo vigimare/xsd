@@ -1,9 +1,9 @@
 <xs:schema
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://example.com/vigimareanomaly"
-	xmlns="http://example.com/vigimareanomaly"
+    targetNamespace="https://github.com/vigimare/xsd"
+	xmlns="https://github.com/vigimare/xsd"
            elementFormDefault="qualified">
-	<xs:element name="VigimareAnomaly">
+	<xs:element name="Anomaly">
 		<xs:complexType>
 			<xs:annotation>
 				<xs:documentation>VigimareAnomaly class that extends CISE Anomaly</xs:documentation>
@@ -11,7 +11,7 @@
 			<xs:sequence>
 				<xs:element name="AnomalyType" type="xs:string"/>
 				<xs:element name="AnomalyScore" type="xs:double"/>
-				<xs:element name="Explaination" type="xs:string"/>
+				<xs:element name="Explanation" type="xs:string"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
