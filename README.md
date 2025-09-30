@@ -1,0 +1,1 @@
+# Vigimare XSD files
