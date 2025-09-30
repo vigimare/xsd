@@ -1,0 +1,18 @@
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/vigimareanomaly"
+	xmlns="http://example.com/vigimareanomaly"
+           elementFormDefault="qualified">
+	<xs:element name="VigimareAnomaly">
+		<xs:complexType>
+			<xs:annotation>
+				<xs:documentation>VigimareAnomaly class that extends CISE Anomaly</xs:documentation>
+			</xs:annotation>
+			<xs:sequence>
+				<xs:element name="AnomalyType" type="xs:string"/>
+				<xs:element name="AnomalyScore" type="xs:double"/>
+				<xs:element name="Explaination" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,19 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/vigimareindication"
+           xmlns="http://example.com/vigimareindication"
+           elementFormDefault="qualified">
+
+  <xs:element name="VigimareIndication">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:documentation>VigimareIndication class</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element name="IndicationType" type="xs:string"/>
+        <xs:element name="IndicationValue" type="xs:string"/>
+        <xs:element name="Explaination" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

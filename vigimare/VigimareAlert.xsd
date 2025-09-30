@@ -1,0 +1,21 @@
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/vigimarealert"
+	xmlns="http://example.com/vigimarealert"
+           elementFormDefault="qualified">
+
+    <xs:import namespace="http://example.com/vigimareintention" schemaLocation="VigimareIntention.xsd"/>
+    <xs:import namespace="http://example.com/vigimareanomaly" schemaLocation="Score.xsd"/>
+
+	<xs:element name="VigimareAlert">
+		<xs:complexType>
+			<xs:annotation>
+				<xs:documentation>VigimareAlert class that extends CISE Alert</xs:documentation>
+			</xs:annotation>
+			<xs:sequence>
+				<xs:element ref="vigimareintention:VigimareIntention" maxOccurs="unbounded"/>
+				<xs:element ref="vigimareanomaly:VigimareAnomaly"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

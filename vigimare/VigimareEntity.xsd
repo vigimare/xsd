@@ -1,0 +1,45 @@
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/vigimareentity"
+	xmlns="http://example.com/vigimareentity"
+           elementFormDefault="qualified">
+	<xs:element name="VigimareEntity">
+		<xs:complexType>
+			<xs:annotation>
+				<xs:documentation>VigimareEntity class that extends CISE Entity</xs:documentation>
+			</xs:annotation>
+			<xs:sequence>
+				<xs:element name="LocationUncertainty" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Unit: meters</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:double">
+							<xs:minInclusive value="0"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="SourceType" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Type/modality of source data</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="TrackID" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Identification as defined by source tracker system. Used when identity of vessel is not specified using another attribute in the message.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:minInclusive value="0"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Category" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Sender specified name of entity type.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

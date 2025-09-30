@@ -1,0 +1,30 @@
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/vigimarevessel"
+	xmlns="http://example.com/vigimarevessel"
+           elementFormDefault="qualified">
+	<xs:element name="VigimareVessel">
+		<xs:complexType>
+			<xs:annotation>
+				<xs:documentation>VigimareVessel class extends the CISE Vessel with some fields.</xs:documentation>
+			</xs:annotation>
+			<xs:sequence>
+				<xs:element name="AisShipType" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:minInclusive value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="SourceType" type="xs:string"/>
+				<xs:element name="TrackID" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:minInclusive value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
