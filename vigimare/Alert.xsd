@@ -1,11 +1,12 @@
 <xs:schema
-	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
     targetNamespace="https://github.com/vigimare/xsd"
-	xmlns="https://github.com/vigimare/xsd"
-           elementFormDefault="qualified">
+    xmlns:vigimare="https://github.com/vigimare/xsd"
+    elementFormDefault="qualified"
+>
 
-    <xs:include schemaLocation="Intention.xsd"/>
-    <xs:include schemaLocation="Anomaly.xsd"/>
+    <xs:include schemaLocation="Intention.xsd" />
+    <xs:include schemaLocation="Anomaly.xsd" />
 
 	<xs:element name="Alert">
 		<xs:complexType>
@@ -13,8 +14,8 @@
 				<xs:documentation>VigimareAlert class that extends CISE Alert</xs:documentation>
 			</xs:annotation>
 			<xs:sequence>
-				<xs:element ref="Intention" maxOccurs="unbounded"/>
-				<xs:element ref="Anomaly"/>
+				<xs:element ref="vigimare:Intention" maxOccurs="unbounded" />
+				<xs:element ref="vigimare:Anomaly" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>

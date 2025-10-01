@@ -1,18 +1,19 @@
 <xs:schema
-	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
     targetNamespace="https://github.com/vigimare/xsd"
-	xmlns="https://github.com/vigimare/xsd"
-           elementFormDefault="qualified">
+    xmlns:vigimare="https://github.com/vigimare/xsd"
+    elementFormDefault="qualified"
+>
 
   <xs:element name="Indication">
     <xs:complexType>
       <xs:annotation>
-        <xs:documentation>VigimareIndication class</xs:documentation>
+        <xs:documentation>Indication class</xs:documentation>
       </xs:annotation>
       <xs:sequence>
-        <xs:element name="IndicationType" type="xs:string"/>
-        <xs:element name="IndicationValue" type="xs:string"/>
-        <xs:element name="Explaination" type="xs:string"/>
+        <xs:element name="IndicationType" type="xs:string" />
+        <xs:element name="IndicationValue" type="xs:string" />
+        <xs:element name="Explanation" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

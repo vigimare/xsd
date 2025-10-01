@@ -1,9 +1,9 @@
 <xs:schema
-	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
     targetNamespace="https://github.com/vigimare/xsd"
-	xmlns="https://github.com/vigimare/xsd"
-           elementFormDefault="qualified">
-
+    xmlns:vigimare="https://github.com/vigimare/xsd"
+    elementFormDefault="qualified"
+>
 	<xs:element name="Vessel">
 		<xs:complexType>
 			<xs:annotation>
@@ -13,15 +13,15 @@
 				<xs:element name="AisShipType" minOccurs="0">
 					<xs:simpleType>
 						<xs:restriction base="xs:integer">
-							<xs:minInclusive value="1"/>
+							<xs:minInclusive value="1" />
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="SourceType" type="xs:string"/>
+				<xs:element name="SourceType" type="xs:string" />
 				<xs:element name="TrackID" minOccurs="0">
 					<xs:simpleType>
 						<xs:restriction base="xs:integer">
-							<xs:minInclusive value="1"/>
+							<xs:minInclusive value="1" />
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
