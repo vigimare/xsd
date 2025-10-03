@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:event="http://www.cise.eu/datamodel/v1/entity/event/"
+    targetNamespace="http://www.cise.eu/datamodel/v1/entity/event/"
+>
+
+    <xs:include schemaLocation="../cise/entity/event/Event.xsd" />
+
+    <xs:complexType name="VigimareIndication">
+        <xs:complexContent>
+            <xs:extension base="event:Event">
+            <xs:sequence>
+              <xs:element name="IndicationType" type="xs:string" />
+              <xs:element name="IndicationValue" type="xs:string" />
+              <xs:element name="Explanation" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:vessel="http://www.cise.eu/datamodel/v1/entity/vessel/"
+    elementFormDefault="qualified"
+    attributeFormDefault="qualified"
+>
+	<xs:import namespace="http://www.cise.eu/datamodel/v1/entity/vessel/" />
+	<xs:element name="VigimareVessel" type="vessel:VigimareVessel" />
+</xs:schema>

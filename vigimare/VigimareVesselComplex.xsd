@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:vessel="http://www.cise.eu/datamodel/v1/entity/vessel/"
+    targetNamespace="http://www.cise.eu/datamodel/v1/entity/vessel/"
+>
+
+    <xs:include schemaLocation="../cise/entity/vessel/Vessel.xsd" />
+
+    <xs:complexType name="VigimareVessel">
+        <xs:complexContent>
+            <xs:extension base="vessel:Vessel">
+            <xs:sequence>
+				<xs:element name="AisShipType" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:minInclusive value="0" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="SourceType" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>
+                        The sources are AIS, radar, satellite.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+				<xs:element name="TrackID" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:minInclusive value="1" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+</xs:schema>

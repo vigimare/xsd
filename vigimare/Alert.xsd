@@ -14,8 +14,10 @@
 				<xs:documentation>VigimareAlert class that extends CISE Alert</xs:documentation>
 			</xs:annotation>
 			<xs:sequence>
-				<xs:element ref="vigimare:Intention" maxOccurs="unbounded" />
-				<xs:element ref="vigimare:Anomaly" />
+			    <xs:choice>
+					<xs:element ref="vigimare:Intention" maxOccurs="unbounded" />
+					<xs:element ref="vigimare:Anomaly" />
+				</xs:choice>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
