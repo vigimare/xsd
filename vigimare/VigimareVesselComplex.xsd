@@ -18,7 +18,7 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="SourceType" type="xs:string">
+				<xs:element name="SourceType" type="xs:string" minOccurs="0">
                     <xs:annotation>
                         <xs:documentation>
                         The sources are AIS, radar, satellite.
