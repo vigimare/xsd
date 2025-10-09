@@ -7,7 +7,7 @@
 
     <xs:include schemaLocation="../cise/entity/object/Object.xsd" />
 
-    <xs:complexType name="VigimareEntity">
+    <xs:complexType name="VigimareObject">
         <xs:complexContent>
             <xs:extension base="object:Object">
             <xs:sequence>
@@ -21,7 +21,7 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="SourceType" type="xs:string">
+				<xs:element name="SourceType" type="xs:string" value="0">
 					<xs:annotation>
 						<xs:documentation>Type/modality of source data</xs:documentation>
 					</xs:annotation>

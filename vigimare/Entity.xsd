@@ -1,12 +1,13 @@
 <xs:schema
-	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
     targetNamespace="https://github.com/vigimare/xsd"
-	xmlns:vigimare="https://github.com/vigimare/xsd"
-    elementFormDefault="qualified">
+    xmlns:vigimare="https://github.com/vigimare/xsd"
+    elementFormDefault="qualified"
+>
 	<xs:element name="Entity">
 		<xs:complexType>
 			<xs:annotation>
-				<xs:documentation>VigimareEntity class that extends CISE Entity</xs:documentation>
+				<xs:documentation>VigimareObject class that extends CISE Object</xs:documentation>
 			</xs:annotation>
 			<xs:sequence>
 				<xs:element name="LocationUncertainty" minOccurs="0">
@@ -15,7 +16,7 @@
 					</xs:annotation>
 					<xs:simpleType>
 						<xs:restriction base="xs:double">
-							<xs:minInclusive value="0"/>
+							<xs:minInclusive value="0" />
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
@@ -26,11 +27,12 @@
 				</xs:element>
 				<xs:element name="TrackID" minOccurs="0">
 					<xs:annotation>
-						<xs:documentation>Identification as defined by source tracker system. Used when identity of vessel is not specified using another attribute in the message.</xs:documentation>
+						<xs:documentation
+                        >Identification as defined by source tracker system. Used when identity of vessel is not specified using another attribute in the message.</xs:documentation>
 					</xs:annotation>
 					<xs:simpleType>
 						<xs:restriction base="xs:integer">
-							<xs:minInclusive value="0"/>
+							<xs:minInclusive value="0" />
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>

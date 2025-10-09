@@ -6,5 +6,5 @@
     attributeFormDefault="qualified"
 >
 	<xs:import namespace="http://www.cise.eu/datamodel/v1/entity/object/" />
-	<xs:element name="VigimareEntity" type="object:VigimareEntity" />
+	<xs:element name="VigimareObject" type="object:VigimareObject" />
 </xs:schema>
