@@ -21,7 +21,7 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="SourceType" type="xs:string" value="0">
+				<xs:element name="SourceType" type="xs:string" minOccurs="0">
 					<xs:annotation>
 						<xs:documentation>Type/modality of source data</xs:documentation>
 					</xs:annotation>
