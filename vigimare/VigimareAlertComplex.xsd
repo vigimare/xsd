@@ -4,22 +4,26 @@
     xmlns:event="http://www.cise.eu/datamodel/v1/entity/event/"
     xmlns:vigimare="https://github.com/vigimare/xsd"
     targetNamespace="http://www.cise.eu/datamodel/v1/entity/event/"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
 >
 
     <xs:include schemaLocation="../cise/entity/event/Event.xsd" />
+    <xs:import namespace="https://github.com/vigimare/xsd" schemaLocation="Intention.xsd" />
+    <xs:import namespace="https://github.com/vigimare/xsd" schemaLocation="Anomaly.xsd" />
 
     <xs:complexType name="VigimareAlert">
         <xs:complexContent>
             <xs:extension base="event:Event">
-            <xs:annotation>
-				<xs:documentation>VigimareAlert</xs:documentation>
-			</xs:annotation>
-			<xs:sequence>
-			    <xs:choice>
-					<xs:element name="Intention" maxOccurs="unbounded" />
-					<xs:element name="Anomaly" />
-				</xs:choice>
-			</xs:sequence>
+                <xs:annotation>
+                    <xs:documentation>VigimareAlert</xs:documentation>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:choice>
+                        <xs:element ref="vigimare:Intention" maxOccurs="unbounded" />
+                        <xs:element ref="vigimare:Anomaly" />
+                    </xs:choice>
+                </xs:sequence>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
